@@ -5,18 +5,127 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Arjun Loya | Data & BI </title>
-    <meta name="description" content="Data Engineer and Business Intelligence specialist with 2+ years at Accenture, specializing in enterprise data architectures, database design, and scalable data solutions.">
+    <title>Arjun Loya | Data &amp; AI Engineering</title>
+    <meta name="description" content="Arjun Loya — data and analytics engineering. Ex-Accenture. ETL/ELT pipelines in Azure Data Factory and Snowflake, dimensional modeling, Power BI and metric governance, forecasting and model evaluation, and production RAG systems. MS Information Systems, Northeastern University.">
     <meta name="author" content="Arjun Loya">
 
     <!-- mobile specific metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- link preview (open graph + twitter)
+    ================================================== -->
+    <!-- REPLACE https://arjunloya.com WITH YOUR REAL DOMAIN IN ALL 4 PLACES BELOW -->
+    <link rel="canonical" href="https://arjunloya.com/">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Arjun Loya">
+    <meta property="og:url" content="https://arjunloya.com/">
+    <meta property="og:title" content="Arjun Loya | Data &amp; AI Engineering">
+    <meta property="og:description" content="I build data warehouses and the AI systems that read from them. Ex-Accenture — Azure Data Factory, Snowflake, dimensional modeling, Power BI, and production RAG.">
+    <meta property="og:image" content="https://arjunloya.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Arjun Loya — Data &amp; AI Engineering">
+    <meta property="og:locale" content="en_US">
+    <meta property="profile:first_name" content="Arjun">
+    <meta property="profile:last_name" content="Loya">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Arjun Loya | Data &amp; AI Engineering">
+    <meta name="twitter:description" content="I build data warehouses and the AI systems that read from them. Ex-Accenture — Azure Data Factory, Snowflake, dimensional modeling, Power BI, and production RAG.">
+    <meta name="twitter:image" content="https://arjunloya.com/images/og-image.jpg">
+
+    <meta name="theme-color" content="#000000">
+
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- spacing overrides
+    ================================================== -->
+    <style>
+        /* h4 ships with margin-top: var(--vspace-2) (~6.4rem), which stacks a
+           large gap above every heading in the technical skills grid. */
+        .skills-block h4 {
+            margin-top    : 0;
+            margin-bottom : var(--vspace-0_5);
+        }
+
+        .skills-block {
+            margin-bottom : var(--vspace-1_5);
+        }
+
+        .skills-block ul,
+        .skills-block p {
+            margin-bottom : 0;
+        }
+
+        .about-skills,
+        .about-community {
+            padding-top : var(--vspace-2);
+        }
+
+        /* .stats-tabs was built for the dark page body: --color-text-dark
+           resolves to white, which is invisible on the modal's white card.
+           Restate the figures with explicit dark values inside the modal. */
+        .modal-popup .stats-tabs {
+            list-style : none;
+            margin     : var(--vspace-0_75) 0 0 0;
+            padding    : 0;
+        }
+
+        .modal-popup .stats-tabs li {
+            display       : inline-block;
+            vertical-align : top;
+            margin        : 0 1.6rem var(--vspace-0_5) 0;
+            padding       : 0 1.6rem 0 0;
+            border-right  : 1px solid rgba(0, 0, 0, 0.15);
+        }
+
+        .modal-popup .stats-tabs li:last-child {
+            margin-right  : 0;
+            padding-right : 0;
+            border-right  : none;
+        }
+
+        .modal-popup .stats-tabs li span {
+            display     : block;
+            font-family : var(--font-1);
+            font-size   : var(--text-md);
+            font-weight : 600;
+            line-height : var(--vspace-0_75);
+            color       : rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-popup .stats-tabs li span em {
+            display     : block;
+            margin-top  : .4rem;
+            font-family : var(--font-1);
+            font-size   : var(--text-xs);
+            line-height : var(--vspace-0_5);
+            font-weight : 400;
+            font-style  : normal;
+            color       : rgba(0, 0, 0, 0.55);
+        }
+
+        /* .modal-popup__details ships absolutely positioned at top-left, where
+           it sat over the template's header image. There is no image here, so
+           it landed on the first line of body copy. Put it in the flow instead. */
+        .modal-popup__details {
+            position         : static;
+            display          : inline-block;
+            background-color : rgba(0, 0, 0, 0.75);
+        }
+
+        .modal-popup__details-wrap {
+            text-align    : right;
+            margin-top    : var(--vspace-0_75);
+            margin-bottom : 0;
+        }
+    </style>
+
 
     <!-- favicons
     ================================================== -->
@@ -93,11 +202,10 @@
                         </div>
 
                 <h1 class="text-huge-title">
-                             I am Arjun, <br>
-                             building enterprise <br>
-                             data systems <br>
-                             that deliver measurable <br>
-                             business impact.
+                             I am Arjun. <br>
+                             I build data warehouses <br>
+                             and the AI systems <br>
+                             that read from them.
                 </h1>
                     </div>
 
@@ -105,7 +213,7 @@
                         <li><a href="https://linkedin.com/in/arjun-loya" target="_blank">LinkedIn</a></li>
                         <li><a href="https://github.com/Loya-ar" target="_blank">GitHub</a></li>
                         <li><a href="mailto:loya.ar@northeastern.edu">Email</a></li>
-                        <li><a href="resume.pdf">Resume</a></li>
+                        <li><a href="resume.pdf" target="_blank">Resume</a></li>
                     </ul>
 
                 </div> <!-- end intro content -->
@@ -139,8 +247,13 @@
                                 About
                             </h2>
                             <p class="attention-getter" data-animate-el>
-                                I am a Data Engineer and Business Intelligence specialist pursuing my Master's in Information Systems at Northeastern University. 
-                                With 2+ years of experience as a Data Analyst at Accenture and advanced training in enterprise data architectures and governance, I specialize in scalable data systems, business intelligence, and data-driven solutions that deliver measurable business impact.
+                                The through-line in my work is measurement. Pipeline, dashboard, forecast, or retrieval system — the question is always the same. How do you know it is right?
+                            </p>
+                            <p data-animate-el>
+                                That has meant three things. The platform: ETL/ELT in Azure Data Factory into Snowflake, dimensional models with a defined grain, schema contracts that reject bad records at load time. The reporting layer on top: Power BI semantic models, row-level security, one canonical definition per metric. And the models: time-series forecasting with rolling backtests at Accenture, and at Groflex AI a RAG pipeline scored against a labeled set rather than judged by feel.
+                            </p>
+                            <p data-animate-el>
+                                I am finishing an MS in Information Systems at Northeastern, after nearly two years on the data side at Accenture and a co-op at Groflex AI.
                             </p>
                             <a href="resume.pdf" class="btn btn--medium u-fullwidth" data-animate-el target="_blank">Download CV</a>
 
@@ -155,12 +268,12 @@
                         <h2 class="text-pretitle" data-animate-el>Core Expertise</h2>
 
                         <ul class="skills-list h1" data-animate-el>
-                            <li>Data Engineering & Architecture</li>
-                            <li>Business Intelligence & Analytics</li>
-                            <li>Database Design & Management</li>
-                            <li>Big Data Systems</li>
-                            <li>Data Governance & Quality</li>
-                            <li>Machine Learning Applications</li>
+                            <li>Data Engineering</li>
+                            <li>Dimensional Modeling</li>
+                            <li>Business Intelligence</li>
+                            <li>Forecasting &amp; Experimentation</li>
+                            <li>Machine Learning</li>
+                            <li>RAG &amp; Retrieval</li>
                         </ul>
 
                     </div>
@@ -180,12 +293,38 @@
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
+                                    <h4 class="timeline__title">Groflex AI</h4>
+                                    <h5 class="timeline__meta">Full Stack Engineer, Co-op</h5>
+                                    <p class="timeline__timeframe">January 2026 - May 2026</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <ul class="disc">
+                                        <li>Built the retrieval layer for a multi-tenant AI product: chunking, embeddings, vector search, ranked retrieval.</li>
+                                        <li>Enforced per-tenant isolation structurally, so a query cannot reach another customer's documents.</li>
+                                        <li>Scored chunking, embeddings, and top-k on precision and recall against a labeled set.</li>
+                                        <li>Built the KPI Registry: one canonical definition per metric, with a runtime formula engine.</li>
+                                        <li>Shipped as FastAPI services in Docker, across Azure OpenAI and Gemini.</li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
                                     <h4 class="timeline__title">Accenture</h4>
-                                    <h5 class="timeline__meta">Data Analyst</h5>
+                                    <h5 class="timeline__meta">Data Analyst (Application Development Associate)</h5>
                                     <p class="timeline__timeframe">October 2022 - July 2024</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Built automated SQL/ETL pipelines in Databricks/Snowflake to update risk indicators hourly, improving data freshness from daily to hourly and cutting manual preparation by 30%. Developed time-series forecasting models and implemented CI/CD deployment, reducing defects by 25%.</p>
+                                    <p>Regulatory and financial reporting &mdash; compliance pipelines, SOX audit readiness, and a financial systems migration to Snowflake.</p>
+                                    <ul class="disc">
+                                        <li>Built and ran ETL/ELT in Azure Data Factory into Snowflake, with dimensional models underneath.</li>
+                                        <li>Wrote schema contracts that rejected bad records at load; held data quality above 99% with anomaly detection.</li>
+                                        <li>Moved risk indicators from daily to hourly refresh, cutting manual preparation by 30%.</li>
+                                        <li>Built time-series forecasts validated with rolling backtests against a seasonal naive baseline.</li>
+                                        <li>Ran requirements sessions with stakeholders, turning vague questions into defined metrics.</li>
+                                        <li>Rebuilt Power BI as a semantic model with row-level security, cutting report turnaround by 25%.</li>
+                                    </ul>
                                 </div>
                             </div>
     
@@ -193,11 +332,14 @@
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">ShelfMerch</h4>
-                                    <h5 class="timeline__meta">Data Intern</h5>
+                                    <h5 class="timeline__meta">Data Science Intern</h5>
                                     <p class="timeline__timeframe">June 2021 - November 2021</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Cleaned and normalized datasets using Excel and SQL, improving weekly report reliability by 35%. Created reusable KPI queries and starter dashboards to track volume, SLAs, and utilization.</p>
+                                    <ul class="disc">
+                                        <li>Cleaned and normalized datasets in SQL and Excel, improving weekly report reliability by 35%.</li>
+                                        <li>Built the first KPI queries and dashboards for volume, SLAs, and utilization.</li>
+                                    </ul>
                                 </div>
                             </div>
                             
@@ -219,12 +361,19 @@
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">Northeastern University</h4>
                                     <h5 class="timeline__meta">Master's in Information Systems</h5>
-                                    <p class="timeline__timeframe">Expected December 2026</p>
+                                    <p class="timeline__timeframe">2025 - December 2026</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p><strong>Current GPA: 3.54/4.0</strong><br><br>
-                                    <strong>Completed Coursework:</strong> Data Science Engineering Methods & Tools, Database Management & Design, Big Data Architecture & Governance, Prompt Engineering & Generative AI<br><br>
-                                    <strong>Fall 2025:</strong> Advanced Data Architectures for Business Intelligence, Software Quality Control & Management</p>
+                                    <p>Includes a full-time co-op semester at Groflex AI.</p>
+                                    <ul class="disc">
+                                        <li>Advanced Data Architectures for Business Intelligence</li>
+                                        <li>Big Data Architecture &amp; Governance</li>
+                                        <li>Database Management &amp; Design</li>
+                                        <li>Data Science Engineering Methods &amp; Tools</li>
+                                        <li>Prompt Engineering &amp; Generative AI</li>
+                                        <li>Business Analysis</li>
+                                        <li>Information Engineering</li>
+                                    </ul>
                                 </div>
                             </div>
     
@@ -233,10 +382,25 @@
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">St Joseph's College</h4>
                                     <h5 class="timeline__meta">BBA in Information Technology</h5>
-                                    <p class="timeline__timeframe">Graduated 2022</p>
+                                    <p class="timeline__timeframe">2019 - 2022</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>GPA: 9.2/10.0 (First Class with Distinction). Strong foundation in business analytics, software engineering, and data management with leadership roles in technical projects.</p>
+                                    <p>First Class with Distinction. President of the Data Science Club.</p>
+                                    <ul class="disc">
+                                        <li>Database Management System</li>
+                                        <li>Data Warehousing &amp; Data Mining</li>
+                                        <li>Data Analytics using R</li>
+                                        <li>Business Statistics</li>
+                                        <li>Python Programming</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Certifications</h4>
+                                    <h5 class="timeline__meta">Microsoft Certified: Azure Fundamentals (AZ-900)</h5>
                                 </div>
                             </div>
     
@@ -257,24 +421,26 @@
                         <div class="row">
                             <div class="column lg-6 tab-12">
                                 <div class="skills-block" data-animate-el>
-                                    <h4>Programming & Analytics</h4>
+                                    <h4>Data Engineering</h4>
                                     <ul class="skills-list">
-                                        <li>Python, SQL, R, PL/SQL</li>
-                                        <li>Pandas, NumPy, scikit-learn</li>
-                                        <li>Time Series Analysis (ARIMA)</li>
-                                        <li>Statistical Analysis & Modeling</li>
+                                        <li>ETL/ELT pipeline design and orchestration</li>
+                                        <li>Azure Data Factory, Databricks, PySpark</li>
+                                        <li>Dimensional modeling, star schemas, SCDs</li>
+                                        <li>Schema contracts, data quality, anomaly detection</li>
+                                        <li>Medallion architecture, Delta Live Tables</li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="column lg-6 tab-12">
                                 <div class="skills-block" data-animate-el>
-                                    <h4>Data Engineering</h4>
+                                    <h4>Analytics &amp; Business Intelligence</h4>
                                     <ul class="skills-list">
-                                        <li>ETL/ELT Pipelines</li>
-                                        <li>Databricks, Snowflake</li>
-                                        <li>Data Architecture & Modeling</li>
-                                        <li>Data Quality & Governance</li>
+                                        <li>Power BI, DAX, Power Query, Tableau</li>
+                                        <li>Semantic models and row-level security</li>
+                                        <li>Metric definition and KPI governance</li>
+                                        <li>Cohort, funnel, and segmentation analysis</li>
+                                        <li>Requirements gathering and root cause analysis</li>
                                     </ul>
                                 </div>
                             </div>
@@ -283,24 +449,54 @@
                         <div class="row">
                             <div class="column lg-6 tab-12">
                                 <div class="skills-block" data-animate-el>
-                                    <h4>BI & Visualization</h4>
+                                    <h4>Statistics &amp; Experimentation</h4>
                                     <ul class="skills-list">
-                                        <li>Power BI, Tableau, DAX</li>
-                                        <li>Dashboard Development</li>
-                                        <li>KPI Design & Standardization</li>
-                                        <li>Executive Reporting</li>
+                                        <li>Hypothesis testing and confidence intervals</li>
+                                        <li>A/B testing and experimental design</li>
+                                        <li>Time-series forecasting (ARIMA)</li>
+                                        <li>Rolling-origin backtesting against baselines</li>
+                                        <li>Error analysis and result interpretation</li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="column lg-6 tab-12">
                                 <div class="skills-block" data-animate-el>
-                                    <h4>Databases & Cloud</h4>
+                                    <h4>Machine Learning</h4>
                                     <ul class="skills-list">
-                                        <li>Oracle, MySQL, PostgreSQL</li>
+                                        <li>Regression and classification</li>
+                                        <li>Feature engineering and cross-validation</li>
+                                        <li>Precision, recall, ROC-AUC, PR-AUC</li>
+                                        <li>Class imbalance and threshold selection</li>
+                                        <li>scikit-learn, PyTorch</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="column lg-6 tab-12">
+                                <div class="skills-block" data-animate-el>
+                                    <h4>AI &amp; Retrieval</h4>
+                                    <ul class="skills-list">
+                                        <li>RAG end to end: chunking, embeddings, vector search</li>
+                                        <li>Retrieval evaluation on labeled sets</li>
+                                        <li>Per-tenant isolation in multi-tenant systems</li>
+                                        <li>Azure OpenAI and Gemini SDKs</li>
+                                        <li>Prompt templating, structured output, schema validation</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="column lg-6 tab-12">
+                                <div class="skills-block" data-animate-el>
+                                    <h4>Languages, Data Stores &amp; Tooling</h4>
+                                    <ul class="skills-list">
+                                        <li>SQL, Python, PL/SQL, R</li>
+                                        <li>Pandas, NumPy, Snowflake, PostgreSQL, MongoDB, Oracle 12c</li>
                                         <li>Azure, AWS (RDS, QuickSight)</li>
-                                        <li>Database Optimization</li>
-                                        <li>Cloud Data Platforms</li>
+                                        <li>FastAPI, Docker, Git, CI/CD</li>
+                                        <li>Partitioning, indexing, query tuning</li>
                                     </ul>
                                 </div>
                             </div>
@@ -308,6 +504,20 @@
 
                     </div>
                 </div> <!-- end about-skills -->
+
+                <!-- ### community
+                ================================================== -->
+                <div class="row about-community" data-animate-block>
+                    <div class="column lg-12">
+
+                        <h2 class="text-pretitle" data-animate-el>Community</h2>
+
+                        <p class="lead" data-animate-el>
+                            Community member at the Roslindale Food Collective in Boston &mdash; logistics and distribution for a nonprofit working on food security for students and local families. Also involved with Northeastern's Off-Campus Engagement and Support program.
+                        </p>
+
+                    </div>
+                </div> <!-- end community -->
 
             </section> <!-- end s-about -->
 
@@ -325,13 +535,35 @@
                             Featured Projects
                         </h2>
                         <p class="h1" data-animate-el>
-                            Here are some of my projects showcasing expertise in data engineering, business intelligence, and advanced analytics.
+                            Four builds. Each one a system, not a notebook.
                         </p>
     
                         <ul class="folio-list row block-lg-one-half block-tab-one-half block-stack-on-550">
 
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-01">
+                                    <div class="folio-list__item-pic">
+                                        <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                             srcset="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 1x, https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80 2x" 
+                                             alt="IMDb Data Analytics Platform">
+                                    </div>
+                                    
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Data Engineering
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            IMDb Analytics Platform
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://github.com/Loya-ar/imdb-bi-project" title="project link" target="_blank">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li> <!--end folio-list__item -->
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="#modal-02">
                                     <div class="folio-list__item-pic">
                                         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                                              srcset="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 1x, https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80 2x" 
@@ -347,17 +579,39 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a class="folio-list__proj-link" href="https://github.com/Loya-ar/BI-Narrative-Generator" title="project link">
+                                <a class="folio-list__proj-link" href="https://github.com/Loya-ar/Prompt_Ai/tree/main/bi-narrative-generator" title="project link" target="_blank">
                                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                                 </a>
                             </li> <!--end folio-list__item -->
 
                             <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-02">
+                                <a class="folio-list__item-link" href="#modal-03">
+                                    <div class="folio-list__item-pic">
+                                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                             srcset="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 1x, https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80 2x" 
+                                             alt="Oracle Database Management Project">
+                                    </div>
+                                    
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Database Design
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            E-commerce Database
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://github.com/Loya-ar/DMDD_6210_Team1" title="project link" target="_blank">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li> <!--end folio-list__item -->
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="#modal-04">
                                     <div class="folio-list__item-pic">
                                         <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                                              srcset="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 1x, https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80 2x" 
-                                             alt="Intelligent Analytics Assistant">
+                                             alt="Multi-Agent Reinforcement Learning Analytics">
                                     </div>
                                     
                                     <div class="folio-list__item-text">
@@ -369,73 +623,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a class="folio-list__proj-link" href="https://github.com/Loya-ar/Multi-Agent-RL-Analytics" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-03">
-                                    <div class="folio-list__item-pic">
-                                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                                             srcset="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 1x, https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80 2x" 
-                                             alt="NYC Taxi Demand Forecasting">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Predictive Analytics
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            NYC Taxi Demand Forecasting
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="https://github.com/Loya-ar/DataScience/tree/main" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-04">
-                                    <div class="folio-list__item-pic">
-                                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                             srcset="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 1x, https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80 2x" 
-                                             alt="Database Management Project">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Database Design
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Database Management System
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="https://github.com/Loya-ar/DMDD_6210_Team1/tree/main" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-05">
-                                    <div class="folio-list__item-pic">
-                                        <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                             srcset="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 1x, https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80 2x" 
-                                             alt="IMDb Data Analytics Platform">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Big Data & BI
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            IMDb Analytics Platform
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="https://github.com/Loya-ar/imdb-bi-project" title="project link">
+                                <a class="folio-list__proj-link" href="https://github.com/Loya-ar/Prompt_Ai/tree/main/intelligent_analytics_submission" title="project link" target="_blank">
                                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                                 </a>
                             </li> <!--end folio-list__item -->
@@ -449,118 +637,10 @@
                     -------------------------------------------- -->
                     <div id="modal-01" hidden>
                         <div class="modal-popup">
-                
-                            <a href="https://github.com/Loya-ar/Prompt_Ai/tree/main/bi-narrative-generator" class="modal-popup__details" target="_blank">Project Details</a>
-                
-                            <div class="modal-popup__desc">
-                                <h5>Business Intelligence Narrative Generator</h5>
-                                <p>Built a vectorized analytics and prompt pipeline that processed more than 10,000 records in under 3 seconds. Added validation, logging, and tests to cut report generation time from 8 hours to about 25 minutes (94% faster). Implemented error handling and automated exports (HTML, Markdown, JSON) for board-ready outputs.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Python</li>
-                                    <li>Streamlit</li>
-                                    <li>Pandas</li>
-                                    <li>Plotly</li>
-                                    <li>Google Gemini API</li>
-                                    <li>Markdown/HTML Exporters</li>
-                                </ul>
-                                <div class="project-results">
-                                    <strong>Key Results:</strong><br>
-                                    • 94% reduction in report generation time<br>
-                                    • Processed 10,000+ records in under 3 seconds<br>
-                                    • Automated executive narrative generation<br>
-                                    • Multi-format export capabilities (HTML, Markdown, JSON)
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- end modal -->
 
-                    <div id="modal-02" hidden>
-                        <div class="modal-popup">
-                
-                            <a href="https://github.com/Loya-ar/Prompt_Ai/tree/main/intelligent_analytics_submission" class="modal-popup__details" target="_blank">Project Details</a>
-                
                             <div class="modal-popup__desc">
-                                <h5>Intelligent Analytics Assistant — Multi-Agent RL System</h5>
-                                <p>Combined contextual bandits (UCB) for agent selection with Q-learning and persistent memory, achieving about 80% improvement versus baseline (p < 0.001) with 9 of 9 episode passes. Automated analytics routing and dashboards across sales, marketing, and HR, reducing analysis runtime from 155 minutes to 19 minutes.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Python</li>
-                                    <li>PyTorch</li>
-                                    <li>Scikit-learn</li>
-                                    <li>Multi-Agent RL</li>
-                                    <li>Contextual Bandits</li>
-                                    <li>Q-Learning</li>
-                                </ul>
-                                <div class="project-results">
-                                    <strong>Key Results:</strong><br>
-                                    • 80% performance improvement (statistically significant)<br>
-                                    • Reduced analysis runtime from 155 to 19 minutes<br>
-                                    • Multi-agent routing across business departments<br>
-                                    • Advanced reinforcement learning implementation
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-03" hidden>
-                        <div class="modal-popup">
-                
-                            <a href="https://github.com/Loya-ar/DataScience/tree/main" class="modal-popup__details" target="_blank">Project Details</a>
-                
-                            <div class="modal-popup__desc">
-                                <h5>NYC Taxi Ride Demand Forecasting and Revenue Analysis</h5>
-                                <p>Processed more than 7 million trips and trained ARIMA models with rolling backtests, producing 24-hour estimates with a mean absolute percentage error (MAPE) of about 13% versus a seasonal naive baseline. Simulated driver caps using actual fare amounts and identified weekend late-night peaks, estimating 300-400 USD per hour revenue loss.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Python</li>
-                                    <li>R</li>
-                                    <li>ARIMA Forecasting</li>
-                                    <li>Time Series Analysis</li>
-                                    <li>Statistical Modeling</li>
-                                    <li>Revenue Optimization</li>
-                                </ul>
-                                <div class="project-results">
-                                    <strong>Key Results:</strong><br>
-                                    • Processed 7M+ taxi trip records<br>
-                                    • 13% MAPE for 24-hour demand forecasting<br>
-                                    • Identified $300-400/hour revenue optimization opportunities<br>
-                                    • Advanced time series modeling with backtesting
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-04" hidden>
-                        <div class="modal-popup">
-                            <a href="https://github.com/Loya-ar/DMDD_6210_Team1" class="modal-popup__details" target="_blank">Project Details</a>
-                
-                            <div class="modal-popup__desc">
-                                <h5>Database Management Project - E-commerce System</h5>
-                                <p>Designed an OLTP schema (5 tables) plus a star-schema reporting layer using range partitioning and composite indexes to achieve sub-second indexed lookups on more than 500,000 rows. Built a PL/SQL package with BULK COLLECT and FORALL and fast refresh materialized views, making batch loads 3x faster and reducing report refresh from 20 minutes to 5 minutes.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Oracle Database 12c</li>
-                                    <li>SQL</li>
-                                    <li>PL/SQL</li>
-                                    <li>Database Design</li>
-                                    <li>Performance Optimization</li>
-                                    <li>Data Warehousing</li>
-                                </ul>
-                                <div class="project-results">
-                                    <strong>Key Results:</strong><br>
-                                    • Sub-second lookups on 500,000+ rows<br>
-                                    • 3x faster batch loading with PL/SQL optimization<br>
-                                    • 75% reduction in report refresh time (20min → 5min)<br>
-                                    • Star schema design for analytics performance
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-05" hidden>
-                        <div class="modal-popup">
-                            <a href="https://github.com/aditim2402/Final-Project--DAMG7370" class="modal-popup__details" target="_blank">Project Details</a>
-                
-                            <div class="modal-popup__desc">
-                                <h5>IMDb Data Analytics Platform — Medallion Architecture</h5>
-                                <p>Built an end-to-end BI solution processing 200M+ records from IMDb's non-commercial datasets using medallion architecture (Bronze → Silver → Gold). Implemented 60 data quality validation rules achieving 99.9997% data quality score. Created a star schema with 3 fact tables, 6 dimensions, and 3 bridge tables, powering 5 interactive Power BI dashboards for movie and personnel analytics.</p>
+                                <h5>IMDb Analytics Platform &mdash; Medallion Architecture</h5>
+                                <p>End-to-end BI platform over IMDb's non-commercial datasets, 200M+ records across 7 source files, built on a Bronze / Silver / Gold medallion architecture in Databricks with Delta Live Tables. 60 data quality validation rules run on every load. The Gold layer is a star schema — 3 fact tables, 6 dimensions, 3 bridge tables — feeding 5 Power BI dashboards for title and personnel analytics.</p>
                                 <ul class="modal-popup__cat">
                                     <li>Databricks</li>
                                     <li>Delta Live Tables</li>
@@ -569,13 +649,97 @@
                                     <li>Star Schema</li>
                                     <li>Data Quality</li>
                                 </ul>
-                                <div class="project-results">
-                                    <strong>Key Results:</strong><br>
-                                    • Processed 200M+ records across 7 source files<br>
-                                    • 99.9997% data quality score with 60 validation rules<br>
-                                    • Star schema: 3 fact tables, 6 dimensions, 3 bridge tables<br>
-                                    • 5 interactive Power BI dashboards for business insights
-                                </div>
+                                <ul class="stats-tabs">
+                                    <li><span>200M+<em>records processed</em></span></li>
+                                    <li><span>99.9997%<em>data quality score</em></span></li>
+                                    <li><span>60<em>validation rules</em></span></li>
+                                    <li><span>5<em>Power BI dashboards</em></span></li>
+                                </ul>
+
+                                <p class="modal-popup__details-wrap">
+                                    <a href="https://github.com/Loya-ar/imdb-bi-project" class="modal-popup__details" target="_blank">Project Details</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div> <!-- end modal -->
+
+                    <div id="modal-02" hidden>
+                        <div class="modal-popup">
+
+                            <div class="modal-popup__desc">
+                                <h5>Business Intelligence Narrative Generator</h5>
+                                <p>A vectorized analytics and prompt pipeline that turns a dataset into a written executive summary. Processes 10,000+ records in under 3 seconds, with validation, logging, and tests around the generation step so the output can be trusted without a human re-reading the numbers. Exports to HTML, Markdown, and JSON.</p>
+                                <ul class="modal-popup__cat">
+                                    <li>Python</li>
+                                    <li>Streamlit</li>
+                                    <li>Pandas</li>
+                                    <li>Plotly</li>
+                                    <li>Google Gemini API</li>
+                                    <li>Markdown/HTML Exporters</li>
+                                </ul>
+                                <ul class="stats-tabs">
+                                    <li><span>94%<em>faster report generation</em></span></li>
+                                    <li><span>25 min<em>down from 8 hours</em></span></li>
+                                    <li><span>10,000+<em>records in under 3 seconds</em></span></li>
+                                </ul>
+
+                                <p class="modal-popup__details-wrap">
+                                    <a href="https://github.com/Loya-ar/Prompt_Ai/tree/main/bi-narrative-generator" class="modal-popup__details" target="_blank">Project Details</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div> <!-- end modal -->
+
+                    <div id="modal-03" hidden>
+                        <div class="modal-popup">
+
+                            <div class="modal-popup__desc">
+                                <h5>E-commerce Database System &mdash; OLTP and Reporting Layer</h5>
+                                <p>A 5-table OLTP schema plus a star-schema reporting layer on Oracle 12c, using range partitioning and composite indexes to hold sub-second indexed lookups on 500,000+ rows. Batch loading runs through a PL/SQL package built on BULK COLLECT and FORALL; the reporting layer uses fast refresh materialized views.</p>
+                                <ul class="modal-popup__cat">
+                                    <li>Oracle Database 12c</li>
+                                    <li>SQL</li>
+                                    <li>PL/SQL</li>
+                                    <li>Database Design</li>
+                                    <li>Partitioning</li>
+                                    <li>Materialized Views</li>
+                                </ul>
+                                <ul class="stats-tabs">
+                                    <li><span>Sub-second<em>lookups on 500,000+ rows</em></span></li>
+                                    <li><span>3x<em>faster batch loading</em></span></li>
+                                    <li><span>75%<em>less report refresh time</em></span></li>
+                                </ul>
+
+                                <p class="modal-popup__details-wrap">
+                                    <a href="https://github.com/Loya-ar/DMDD_6210_Team1" class="modal-popup__details" target="_blank">Project Details</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div> <!-- end modal -->
+
+                    <div id="modal-04" hidden>
+                        <div class="modal-popup">
+
+                            <div class="modal-popup__desc">
+                                <h5>Intelligent Analytics Assistant &mdash; Multi-Agent RL System</h5>
+                                <p>Routes analytics questions to the right specialist agent using contextual bandits (UCB) for selection, with Q-learning and persistent memory so routing improves across episodes. The part I care about is the evaluation: performance was measured against a fixed-routing baseline across 9 held-out episodes with a significance test on the difference, not judged by inspection of a few examples.</p>
+                                <ul class="modal-popup__cat">
+                                    <li>Python</li>
+                                    <li>PyTorch</li>
+                                    <li>Scikit-learn</li>
+                                    <li>Multi-Agent RL</li>
+                                    <li>Contextual Bandits</li>
+                                    <li>Q-Learning</li>
+                                </ul>
+                                <ul class="stats-tabs">
+                                    <li><span>~80%<em>improvement over baseline</em></span></li>
+                                    <li><span>p &lt; 0.001<em>over 9 held-out episodes</em></span></li>
+                                    <li><span>8x<em>faster analysis runtime</em></span></li>
+                                </ul>
+
+                                <p class="modal-popup__details-wrap">
+                                    <a href="https://github.com/Loya-ar/Prompt_Ai/tree/main/intelligent_analytics_submission" class="modal-popup__details" target="_blank">Project Details</a>
+                                </p>
                             </div>
                         </div>
                     </div> <!-- end modal -->
@@ -597,29 +761,32 @@
                         </h2>
 
                         <p class="h1">
-                            Passionate about building scalable data systems and delivering actionable business insights. 
-                            Currently seeking Summer 2026 internship opportunities in Data Engineering, Business Intelligence, and Data Science where I can contribute technical expertise and grow alongside innovative teams.
+                            I finish at Northeastern in December 2026 and I am available from January 2027.
+                        </p>
+                        <p class="lead">
+                            Looking for data engineering, analytics engineering, data science, and applied machine learning roles. Anywhere in the US.
                         </p>
                     </div>
                 </div> <!-- end contact-top -->
 
                 <div class="row contact-bottom">
-                    <div class="column lg-3 md-5 tab-6 stack-on-550 contact-block">
+                    <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
                         <h3 class="text-pretitle">Reach me at</h3>
                         <p class="contact-links">
-                            <a href="mailto:loya.ar@northeastern.edu" >loya.ar@northeastern.edu</a> <br>
-                            <a href="https://linkedin.com/in/arjun-loya" target="_blank">LinkedIn</a>
+                            <a href="mailto:loya.ar@northeastern.edu">loya.ar@northeastern.edu</a> <br>
+                            Boston, MA &middot; open to relocation
                         </p>
                     </div>
                     <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
-                        <h3 class="text-pretitle">Professional Links</h3>
+                        <h3 class="text-pretitle">Elsewhere</h3>
                         <ul class="contact-social">
-                            <a href="https://github.com/Loya-ar" target="_blank">GitHub</a><br>
-                            <a href="resume.pdf" target="_blank">Resume/CV</a>
+                            <li><a href="https://linkedin.com/in/arjun-loya" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://github.com/Loya-ar" target="_blank">GitHub</a></li>
+                            <li><a href="resume.pdf" target="_blank">Resume</a></li>
                         </ul>
                     </div>
                     <div class="column lg-4 md-12 tab-6 stack-on-550 contact-block">
-                        <a href="mailto:loya.ar@northeastern.edu" >Let's Connect</a>
+                        <a href="mailto:loya.ar@northeastern.edu" class="btn btn--medium contact-btn">Let's Connect</a>
                     </div>
                 </div> <!-- end contact-bottom -->
 
@@ -634,8 +801,8 @@
 
             <div class="row">
                 <div class="column ss-copyright">
-                    <span>© Copyright Arjun Loya 2025</span> 
-                    <span>Data Engineer & BI Specialist</span>
+                    <span>&copy; Arjun Loya 2026</span> 
+                    <span>Data Engineer &amp; Analytics Engineer</span>
                 </div>
 
                 <div class="ss-go-top">
