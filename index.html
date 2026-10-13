@@ -15,7 +15,6 @@
 
     <!-- link preview (open graph + twitter)
     ================================================== -->
-    <!-- REPLACE https://arjunloya.com WITH YOUR REAL DOMAIN IN ALL 4 PLACES BELOW -->
     <link rel="canonical" href="https://arjunloya.com/">
 
     <meta property="og:type" content="profile">
@@ -212,7 +211,7 @@
                     <ul class="intro-social">
                         <li><a href="https://linkedin.com/in/arjun-loya" target="_blank">LinkedIn</a></li>
                         <li><a href="https://github.com/Loya-ar" target="_blank">GitHub</a></li>
-                        <li><a href="mailto:loya.ar@northeastern.edu">Email</a></li>
+                        <li><a href="mailto:arjunloya.data@gmail.com">Email</a></li>
                         <li><a href="resume.pdf" target="_blank">Resume</a></li>
                     </ul>
 
@@ -250,7 +249,7 @@
                                 The through-line in my work is measurement. Pipeline, dashboard, forecast, or retrieval system — the question is always the same. How do you know it is right?
                             </p>
                             <p data-animate-el>
-                                That has meant three things. The platform: ETL/ELT in Azure Data Factory into Snowflake, dimensional models with a defined grain, schema contracts that reject bad records at load time. The reporting layer on top: Power BI semantic models, row-level security, one canonical definition per metric. And the models: time-series forecasting with rolling backtests at Accenture, and at Groflex AI a RAG pipeline scored against a labeled set rather than judged by feel.
+                                That has meant three things. The platform: Azure Data Factory pipelines into Snowflake, star-schema models, and SQL validation and reconciliation rules that stop bad data before it reaches a report. The reporting layer on top: Power BI with DAX and row-level security, and an 80+ KPI registry with one agreed definition per metric. And the AI layer: at Groflex AI, a RAG pipeline returning answers in 1&ndash;3 seconds with per-tenant isolation.
                             </p>
                             <p data-animate-el>
                                 I am finishing an MS in Information Systems at Northeastern, after nearly two years on the data side at Accenture and a co-op at Groflex AI.
@@ -294,16 +293,17 @@
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">Groflex AI</h4>
-                                    <h5 class="timeline__meta">Full Stack Engineer, Co-op</h5>
+                                    <h5 class="timeline__meta">Data and AI Engineer Co-op</h5>
                                     <p class="timeline__timeframe">January 2026 - May 2026</p>
                                 </div>
                                 <div class="timeline__desc">
                                     <ul class="disc">
-                                        <li>Built the retrieval layer for a multi-tenant AI product: chunking, embeddings, vector search, ranked retrieval.</li>
-                                        <li>Enforced per-tenant isolation structurally, so a query cannot reach another customer's documents.</li>
-                                        <li>Scored chunking, embeddings, and top-k on precision and recall against a labeled set.</li>
-                                        <li>Built the KPI Registry: one canonical definition per metric, with a runtime formula engine.</li>
-                                        <li>Shipped as FastAPI services in Docker, across Azure OpenAI and Gemini.</li>
+                                        <li>Delivered 1&ndash;3 s end-to-end RAG responses over 3+ client document sets, using Azure OpenAI embeddings and MongoDB Atlas Vector Search.</li>
+                                        <li>Enforced per-tenant index isolation, so a query cannot reach another customer's documents.</li>
+                                        <li>Integrated Azure OpenAI into production APIs, handling prompt templating, context management, and structured output parsing.</li>
+                                        <li>Documented a registry of 80+ KPIs with business teams, giving every client metric one agreed definition.</li>
+                                        <li>Enforced 7-role RBAC and PII masking in a 30+ endpoint FastAPI backend, with schema contracts on write paths.</li>
+                                        <li>Shipped changes through GitHub Actions CI/CD with pytest suites and peer pull-request reviews.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -316,14 +316,13 @@
                                     <p class="timeline__timeframe">October 2022 - July 2024</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Regulatory and financial reporting &mdash; compliance pipelines, SOX audit readiness, and a financial systems migration to Snowflake.</p>
+                                    <p>Compliance and KPI reporting for a Fortune 100 US banking client.</p>
                                     <ul class="disc">
-                                        <li>Built and ran ETL/ELT in Azure Data Factory into Snowflake, with dimensional models underneath.</li>
-                                        <li>Wrote schema contracts that rejected bad records at load; held data quality above 99% with anomaly detection.</li>
-                                        <li>Moved risk indicators from daily to hourly refresh, cutting manual preparation by 30%.</li>
-                                        <li>Built time-series forecasts validated with rolling backtests against a seasonal naive baseline.</li>
-                                        <li>Ran requirements sessions with stakeholders, turning vague questions into defined metrics.</li>
-                                        <li>Rebuilt Power BI as a semantic model with row-level security, cutting report turnaround by 25%.</li>
+                                        <li>Cut Azure Data Factory pipeline refresh time ~40% (from 15&ndash;45 min) by tuning ETL workflows behind daily Snowflake loads.</li>
+                                        <li>Built 50+ SQL validation, reconciliation, and trigger rules across 15+ source feeds, keeping bad values out of monthly leadership reports.</li>
+                                        <li>Reduced weekly manual data-prep hours ~20% by automating SQL data quality checks on millions of rows per load.</li>
+                                        <li>Shortened report turnaround ~25% with Power BI dashboards on star-schema models, using DAX, Power Query, and anomaly alerts.</li>
+                                        <li>Wrote complex SQL in Snowflake and Databricks for compliance and KPI reporting datasets and ad-hoc analysis.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -332,13 +331,13 @@
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">ShelfMerch</h4>
-                                    <h5 class="timeline__meta">Data Science Intern</h5>
+                                    <h5 class="timeline__meta">Data Intern</h5>
                                     <p class="timeline__timeframe">June 2021 - November 2021</p>
                                 </div>
                                 <div class="timeline__desc">
                                     <ul class="disc">
-                                        <li>Cleaned and normalized datasets in SQL and Excel, improving weekly report reliability by 35%.</li>
-                                        <li>Built the first KPI queries and dashboards for volume, SLAs, and utilization.</li>
+                                        <li>Caught duplicate and out-of-range sales records before load with SQL cleaning and validation routines.</li>
+                                        <li>Built Power BI scorecards on weekly sales KPIs that informed inventory and merchandising decisions.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -361,18 +360,17 @@
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">Northeastern University</h4>
                                     <h5 class="timeline__meta">Master's in Information Systems</h5>
-                                    <p class="timeline__timeframe">2025 - December 2026</p>
+                                    <p class="timeline__timeframe">Expected Dec 2026</p>
                                 </div>
                                 <div class="timeline__desc">
                                     <p>Includes a full-time co-op semester at Groflex AI.</p>
                                     <ul class="disc">
-                                        <li>Advanced Data Architectures for Business Intelligence</li>
-                                        <li>Big Data Architecture &amp; Governance</li>
-                                        <li>Database Management &amp; Design</li>
-                                        <li>Data Science Engineering Methods &amp; Tools</li>
-                                        <li>Prompt Engineering &amp; Generative AI</li>
-                                        <li>Business Analysis</li>
-                                        <li>Information Engineering</li>
+                                        <li>Designing Data Architecture for Business Intelligence</li>
+                                        <li>Big-Data Systems and Intelligence Analytics</li>
+                                        <li>Database Design and Management</li>
+                                        <li>Data Science Engineering Methods and Tools</li>
+                                        <li>Prompt Engineering and AI</li>
+                                        <li>Reinforcement Learning for Agentic AI Systems</li>
                                     </ul>
                                 </div>
                             </div>
@@ -385,7 +383,6 @@
                                     <p class="timeline__timeframe">2019 - 2022</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>First Class with Distinction. President of the Data Science Club.</p>
                                     <ul class="disc">
                                         <li>Database Management System</li>
                                         <li>Data Warehousing &amp; Data Mining</li>
@@ -400,7 +397,9 @@
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">Certifications</h4>
-                                    <h5 class="timeline__meta">Microsoft Certified: Azure Fundamentals (AZ-900)</h5>
+                                    <h5 class="timeline__meta">Microsoft Certified: Azure Fundamentals (AZ-900)<br>
+                                        Google Data Analytics Professional Certificate<br>
+                                        AWS Certified Data Engineer &ndash; Associate (in progress)</h5>
                                 </div>
                             </div>
     
@@ -535,7 +534,7 @@
                             Featured Projects
                         </h2>
                         <p class="h1" data-animate-el>
-                            Four builds. Each one a system, not a notebook.
+                            Six builds. Each one measured, not eyeballed.
                         </p>
     
                         <ul class="folio-list row block-lg-one-half block-tab-one-half block-stack-on-550">
@@ -557,13 +556,35 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a class="folio-list__proj-link" href="https://github.com/Loya-ar/imdb-bi-project" title="project link" target="_blank">
+                                <a class="folio-list__proj-link" href="https://github.com/Loya-ar/Final-Project--DAMG7370" title="project link" target="_blank">
                                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                                 </a>
                             </li> <!--end folio-list__item -->
 
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-02">
+                                    <div class="folio-list__item-pic">
+                                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                             srcset="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 1x, https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80 2x" 
+                                             alt="Chinook OLTP to Snowflake ELT Pipeline">
+                                    </div>
+                                    
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Data Engineering
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            Chinook OLTP to Snowflake ELT
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://github.com/Loya-ar/damg7370/tree/main/Replicate_Assignment" title="project link" target="_blank">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li> <!--end folio-list__item -->
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="#modal-03">
                                     <div class="folio-list__item-pic">
                                         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                                              srcset="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 1x, https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80 2x" 
@@ -580,28 +601,6 @@
                                     </div>
                                 </a>
                                 <a class="folio-list__proj-link" href="https://github.com/Loya-ar/Prompt_Ai/tree/main/bi-narrative-generator" title="project link" target="_blank">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-03">
-                                    <div class="folio-list__item-pic">
-                                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                                             srcset="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 1x, https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80 2x" 
-                                             alt="Oracle Database Management Project">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Database Design
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            E-commerce Database
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="https://github.com/Loya-ar/DMDD_6210_Team1" title="project link" target="_blank">
                                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                                 </a>
                             </li> <!--end folio-list__item -->
@@ -628,6 +627,50 @@
                                 </a>
                             </li> <!--end folio-list__item -->
 
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="#modal-05">
+                                    <div class="folio-list__item-pic">
+                                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                             srcset="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 1x, https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80 2x" 
+                                             alt="Hospital Quality Analysis">
+                                    </div>
+                                    
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Statistics
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            Hospital Quality Analysis
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://youtu.be/oHZWyJ4h-6k" title="project link" target="_blank">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li> <!--end folio-list__item -->
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="#modal-06">
+                                    <div class="folio-list__item-pic">
+                                        <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                             srcset="https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 1x, https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80 2x" 
+                                             alt="NYC Taxi Demand Forecasting">
+                                    </div>
+                                    
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Forecasting
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            NYC Taxi Demand Forecasting
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://github.com/Loya-ar/Data_Science" title="project link" target="_blank">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li> <!--end folio-list__item -->
+
                         </ul> <!-- end folio-list -->
 
                     </div> <!-- end column -->
@@ -640,24 +683,23 @@
 
                             <div class="modal-popup__desc">
                                 <h5>IMDb Analytics Platform &mdash; Medallion Architecture</h5>
-                                <p>End-to-end BI platform over IMDb's non-commercial datasets, 200M+ records across 7 source files, built on a Bronze / Silver / Gold medallion architecture in Databricks with Delta Live Tables. 60 data quality validation rules run on every load. The Gold layer is a star schema — 3 fact tables, 6 dimensions, 3 bridge tables — feeding 5 Power BI dashboards for title and personnel analytics.</p>
+                                <p>End-to-end BI platform over IMDb's non-commercial datasets, 200M+ records across 7 source files, built on a Bronze / Silver / Gold medallion architecture in Databricks with Delta Live Tables. 60 data quality validation rules run on every load, with audit lineage. The Gold layer is a star schema of fact, dimension, and bridge tables feeding Power BI dashboards for title and personnel analytics.</p>
                                 <ul class="modal-popup__cat">
                                     <li>Databricks</li>
                                     <li>Delta Live Tables</li>
+                                    <li>PySpark</li>
                                     <li>Power BI</li>
-                                    <li>Alteryx</li>
                                     <li>Star Schema</li>
                                     <li>Data Quality</li>
                                 </ul>
                                 <ul class="stats-tabs">
                                     <li><span>200M+<em>records processed</em></span></li>
-                                    <li><span>99.9997%<em>data quality score</em></span></li>
+                                    <li><span>7<em>source files</em></span></li>
                                     <li><span>60<em>validation rules</em></span></li>
-                                    <li><span>5<em>Power BI dashboards</em></span></li>
                                 </ul>
 
                                 <p class="modal-popup__details-wrap">
-                                    <a href="https://github.com/Loya-ar/imdb-bi-project" class="modal-popup__details" target="_blank">Project Details</a>
+                                    <a href="https://github.com/Loya-ar/Final-Project--DAMG7370" class="modal-popup__details" target="_blank">Project Details</a>
                                 </p>
                             </div>
                         </div>
@@ -667,24 +709,24 @@
                         <div class="modal-popup">
 
                             <div class="modal-popup__desc">
-                                <h5>Business Intelligence Narrative Generator</h5>
-                                <p>A vectorized analytics and prompt pipeline that turns a dataset into a written executive summary. Processes 10,000+ records in under 3 seconds, with validation, logging, and tests around the generation step so the output can be trusted without a human re-reading the numbers. Exports to HTML, Markdown, and JSON.</p>
+                                <h5>Chinook OLTP to Snowflake &mdash; Incremental ELT</h5>
+                                <p>Replicates the Chinook OLTP database into Snowflake with change data capture. Each row is hashed with SHA-256 to detect changes, and merge upserts apply them to SCD Type 1 dimensions. Extracts are staged as Parquet, then layered from staging to curated Snowflake tables, with secrets held in Azure Key Vault and validation counts checked at every layer.</p>
                                 <ul class="modal-popup__cat">
-                                    <li>Python</li>
-                                    <li>Streamlit</li>
-                                    <li>Pandas</li>
-                                    <li>Plotly</li>
-                                    <li>Google Gemini API</li>
-                                    <li>Markdown/HTML Exporters</li>
+                                    <li>Azure Data Factory</li>
+                                    <li>Snowflake</li>
+                                    <li>Parquet</li>
+                                    <li>Azure Key Vault</li>
+                                    <li>CDC</li>
+                                    <li>SCD</li>
                                 </ul>
                                 <ul class="stats-tabs">
-                                    <li><span>94%<em>faster report generation</em></span></li>
-                                    <li><span>25 min<em>down from 8 hours</em></span></li>
-                                    <li><span>10,000+<em>records in under 3 seconds</em></span></li>
+                                    <li><span>SHA-256<em>row-hash change detection</em></span></li>
+                                    <li><span>SCD Type 1<em>merge upserts</em></span></li>
+                                    <li><span>Per layer<em>validation counts</em></span></li>
                                 </ul>
 
                                 <p class="modal-popup__details-wrap">
-                                    <a href="https://github.com/Loya-ar/Prompt_Ai/tree/main/bi-narrative-generator" class="modal-popup__details" target="_blank">Project Details</a>
+                                    <a href="https://github.com/Loya-ar/damg7370/tree/main/Replicate_Assignment" class="modal-popup__details" target="_blank">Project Details</a>
                                 </p>
                             </div>
                         </div>
@@ -694,24 +736,23 @@
                         <div class="modal-popup">
 
                             <div class="modal-popup__desc">
-                                <h5>E-commerce Database System &mdash; OLTP and Reporting Layer</h5>
-                                <p>A 5-table OLTP schema plus a star-schema reporting layer on Oracle 12c, using range partitioning and composite indexes to hold sub-second indexed lookups on 500,000+ rows. Batch loading runs through a PL/SQL package built on BULK COLLECT and FORALL; the reporting layer uses fast refresh materialized views.</p>
+                                <h5>Business Intelligence Narrative Generator</h5>
+                                <p>An LLM analytics app on the Google Gemini API that turns a raw CSV into executive insights and Plotly charts. Prompt templates and structured outputs keep the generation step consistent from run to run, and finished reports export to HTML, Markdown, and JSON.</p>
                                 <ul class="modal-popup__cat">
-                                    <li>Oracle Database 12c</li>
-                                    <li>SQL</li>
-                                    <li>PL/SQL</li>
-                                    <li>Database Design</li>
-                                    <li>Partitioning</li>
-                                    <li>Materialized Views</li>
+                                    <li>Python</li>
+                                    <li>Streamlit</li>
+                                    <li>Pandas</li>
+                                    <li>Plotly</li>
+                                    <li>Google Gemini API</li>
+                                    <li>Markdown/HTML Exporters</li>
                                 </ul>
                                 <ul class="stats-tabs">
-                                    <li><span>Sub-second<em>lookups on 500,000+ rows</em></span></li>
-                                    <li><span>3x<em>faster batch loading</em></span></li>
-                                    <li><span>75%<em>less report refresh time</em></span></li>
+                                    <li><span>25 min<em>to a full BI report</em></span></li>
+                                    <li><span>3<em>export formats</em></span></li>
                                 </ul>
 
                                 <p class="modal-popup__details-wrap">
-                                    <a href="https://github.com/Loya-ar/DMDD_6210_Team1" class="modal-popup__details" target="_blank">Project Details</a>
+                                    <a href="https://github.com/Loya-ar/Prompt_Ai/tree/main/bi-narrative-generator" class="modal-popup__details" target="_blank">Project Details</a>
                                 </p>
                             </div>
                         </div>
@@ -722,23 +763,75 @@
 
                             <div class="modal-popup__desc">
                                 <h5>Intelligent Analytics Assistant &mdash; Multi-Agent RL System</h5>
-                                <p>Routes analytics questions to the right specialist agent using contextual bandits (UCB) for selection, with Q-learning and persistent memory so routing improves across episodes. The part I care about is the evaluation: performance was measured against a fixed-routing baseline across 9 held-out episodes with a significance test on the difference, not judged by inspection of a few examples.</p>
+                                <p>Routes analytics tasks to specialist agents with tool calling, using contextual bandits (UCB) to choose the agent and Q-learning to coordinate them. The part I care about is the evaluation: results were validated with t-tests and confidence intervals, not judged by inspection of a few examples.</p>
                                 <ul class="modal-popup__cat">
                                     <li>Python</li>
-                                    <li>PyTorch</li>
-                                    <li>Scikit-learn</li>
-                                    <li>Multi-Agent RL</li>
+                                    <li>Multi-Agent Systems</li>
+                                    <li>Tool Calling</li>
                                     <li>Contextual Bandits</li>
                                     <li>Q-Learning</li>
+                                    <li>Statistical Testing</li>
                                 </ul>
                                 <ul class="stats-tabs">
-                                    <li><span>~80%<em>improvement over baseline</em></span></li>
-                                    <li><span>p &lt; 0.001<em>over 9 held-out episodes</em></span></li>
-                                    <li><span>8x<em>faster analysis runtime</em></span></li>
+                                    <li><span>UCB<em>contextual-bandit routing</em></span></li>
+                                    <li><span>Q-learning<em>agent coordination</em></span></li>
+                                    <li><span>t-tests + CIs<em>result validation</em></span></li>
                                 </ul>
 
                                 <p class="modal-popup__details-wrap">
                                     <a href="https://github.com/Loya-ar/Prompt_Ai/tree/main/intelligent_analytics_submission" class="modal-popup__details" target="_blank">Project Details</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div> <!-- end modal -->
+
+                    <div id="modal-05" hidden>
+                        <div class="modal-popup">
+
+                            <div class="modal-popup__desc">
+                                <h5>Hospital Quality Analysis &mdash; CMS Hospital Compare</h5>
+                                <p>Merged CMS Hospital Compare outcome and hospital-level datasets for 4,000+ US hospitals, reviewed outliers with boxplots, and tested whether 30-day heart attack mortality differs by hospital type. A one-way ANOVA shows that it does, and hospitals were then ranked by outcome.</p>
+                                <ul class="modal-popup__cat">
+                                    <li>R</li>
+                                    <li>ANOVA</li>
+                                    <li>CMS Hospital Compare</li>
+                                    <li>Hypothesis Testing</li>
+                                    <li>Data Merging</li>
+                                </ul>
+                                <ul class="stats-tabs">
+                                    <li><span>4,000+<em>hospitals analyzed</em></span></li>
+                                    <li><span>p = 0.000826<em>one-way ANOVA</em></span></li>
+                                </ul>
+
+                                <p class="modal-popup__details-wrap">
+                                    <a href="https://youtu.be/oHZWyJ4h-6k" class="modal-popup__details" target="_blank">Project Details</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div> <!-- end modal -->
+
+                    <div id="modal-06" hidden>
+                        <div class="modal-popup">
+
+                            <div class="modal-popup__desc">
+                                <h5>NYC Taxi Demand Forecasting &mdash; ARIMA in R</h5>
+                                <p>Forecasts hourly NYC TLC taxi demand for January 2025 with ARIMA in R, and maps demand volatility in a day-by-hour heatmap. A modeled estimate, built with dplyr and lubridate, puts the revenue lost in driver-shortage hours at $300&ndash;400 per hour.</p>
+                                <ul class="modal-popup__cat">
+                                    <li>R</li>
+                                    <li>ARIMA</li>
+                                    <li>tidyverse</li>
+                                    <li>data.table</li>
+                                    <li>ggplot2</li>
+                                    <li>Time Series</li>
+                                </ul>
+                                <ul class="stats-tabs">
+                                    <li><span>Hourly<em>demand forecast</em></span></li>
+                                    <li><span>Day &times; hour<em>volatility heatmap</em></span></li>
+                                    <li><span>$300&ndash;400/hr<em>modeled shortage-hour loss</em></span></li>
+                                </ul>
+
+                                <p class="modal-popup__details-wrap">
+                                    <a href="https://github.com/Loya-ar/Data_Science" class="modal-popup__details" target="_blank">Project Details</a>
                                 </p>
                             </div>
                         </div>
@@ -773,7 +866,7 @@
                     <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
                         <h3 class="text-pretitle">Reach me at</h3>
                         <p class="contact-links">
-                            <a href="mailto:loya.ar@northeastern.edu">loya.ar@northeastern.edu</a> <br>
+                            <a href="mailto:arjunloya.data@gmail.com">arjunloya.data@gmail.com</a> <br>
                             Boston, MA &middot; open to relocation
                         </p>
                     </div>
@@ -786,7 +879,7 @@
                         </ul>
                     </div>
                     <div class="column lg-4 md-12 tab-6 stack-on-550 contact-block">
-                        <a href="mailto:loya.ar@northeastern.edu" class="btn btn--medium contact-btn">Let's Connect</a>
+                        <a href="mailto:arjunloya.data@gmail.com" class="btn btn--medium contact-btn">Let's Connect</a>
                     </div>
                 </div> <!-- end contact-bottom -->
 
