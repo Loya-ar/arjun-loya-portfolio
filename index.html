@@ -846,7 +846,7 @@
 
                             <div class="modal-popup__desc">
                                 <h5>NYC Taxi Demand Forecasting &mdash; ARIMA in R</h5>
-                                <p>Forecasts hourly NYC TLC taxi demand for January 2025 with ARIMA in R, and maps demand volatility in a day-by-hour heatmap. A modeled estimate, built with dplyr and lubridate, puts the revenue lost in driver-shortage hours at $300&ndash;400 per hour.</p>
+                                <p>Forecasts hourly demand across 3.48M NYC yellow-taxi trips from January 2025 with ARIMA in R, tested with rolling 24-hour forecasts against simple baselines. ARIMA beat &ldquo;same hour yesterday&rdquo; by 15%, but a plain &ldquo;same hour last week&rdquo; forecast beat every model, because weekends differ sharply from weekdays and one month holds too few weeks to learn that. A day-by-hour heatmap maps demand, and a capped-supply simulation estimates overnight revenue at risk.</p>
                                 <ul class="modal-popup__cat">
                                     <li>R</li>
                                     <li>ARIMA</li>
@@ -856,9 +856,9 @@
                                     <li>Time Series</li>
                                 </ul>
                                 <ul class="stats-tabs">
-                                    <li><span>Hourly<em>demand forecast</em></span></li>
-                                    <li><span>Day &times; hour<em>volatility heatmap</em></span></li>
-                                    <li><span>$300&ndash;400/hr<em>modeled shortage-hour loss</em></span></li>
+                                    <li><span>3.48M<em>trips analyzed</em></span></li>
+                                    <li><span>4 models<em>rolling 24-hour backtest</em></span></li>
+                                    <li><span>Day &times; hour<em>demand heatmap</em></span></li>
                                 </ul>
 
                                 <p class="modal-popup__details-wrap">
