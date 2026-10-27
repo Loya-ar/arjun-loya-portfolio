@@ -10,7 +10,7 @@ MS in Information Systems, Northeastern University (expected Dec 2026). Availabl
 
 | Project | Area | Stack | Link |
 |---|---|---|---|
-| IMDb Analytics Platform | Data Engineering | Databricks, Delta Live Tables, PySpark, Power BI | [Repo](https://github.com/Loya-ar/Final-Project--DAMG7370) |
+| IMDb Analytics Platform | Data Engineering | Databricks, Delta Live Tables, PySpark, Power BI | [Repo](https://github.com/Loya-ar/imdb-analytics-platform) |
 | Chinook OLTP to Snowflake ELT | Data Engineering | Azure Data Factory, Snowflake, Parquet, Azure Key Vault | [Repo](https://github.com/Loya-ar/chinook-snowflake-elt) |
 | BI Narrative Generator | Business Intelligence | Python, Streamlit, Plotly, Gemini API | [Repo](https://github.com/Loya-ar/bi-narrative-generator) |
 | Multi-Agent Analytics System | Machine Learning | Python, contextual bandits (UCB), Q-learning | [Repo](https://github.com/Loya-ar/intelligent-analytics-rl) |
