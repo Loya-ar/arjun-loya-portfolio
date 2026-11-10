@@ -818,18 +818,19 @@
 
                             <div class="modal-popup__desc">
                                 <h5>Business Intelligence Narrative Generator</h5>
-                                <p>An LLM analytics app on the Google Gemini API that turns a raw CSV into executive insights and Plotly charts. Prompt templates and structured outputs keep the generation step consistent from run to run, and finished reports export to HTML, Markdown, and JSON.</p>
+                                <p>Upload a CSV or Excel file and get a written executive report. The analysis happens in code before the model sees anything: pandas and SciPy compute monthly trends (linear regression, with R&sup2; grading their strength), KPIs and correlations, and detect the business domain. A prompt engine then passes those results to Google Gemini, tailored to one of 4 report styles and 4 audiences, and tells it which Plotly charts sit beside the report. Reports export to HTML, Markdown or JSON. If there&rsquo;s no API key or the call fails, the app falls back to a demo narrative, and 17 offline tests cover the pipeline.</p>
                                 <ul class="modal-popup__cat">
                                     <li>Python</li>
                                     <li>Streamlit</li>
                                     <li>Pandas</li>
                                     <li>Plotly</li>
                                     <li>Google Gemini API</li>
-                                    <li>Markdown/HTML Exporters</li>
+                                    <li>SciPy</li>
                                 </ul>
                                 <ul class="stats-tabs">
-                                    <li><span>25 min<em>to a full BI report</em></span></li>
-                                    <li><span>3<em>export formats</em></span></li>
+                                    <li><span>Stats first<em>computed before the LLM writes</em></span></li>
+                                    <li><span>4 &times; 4<em>styles &times; audiences</em></span></li>
+                                    <li><span>17<em>offline tests</em></span></li>
                                 </ul>
 
                                 <p class="modal-popup__details-wrap">
