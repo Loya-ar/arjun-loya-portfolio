@@ -790,20 +790,20 @@
                         <div class="modal-popup">
 
                             <div class="modal-popup__desc">
-                                <h5>Chinook OLTP to Snowflake &mdash; Incremental ELT</h5>
-                                <p>Replicates the Chinook OLTP database into Snowflake with change data capture. Each row is hashed with SHA-256 to detect changes, and merge upserts apply them to SCD Type 1 dimensions. Extracts are staged as Parquet, then layered from staging to curated Snowflake tables, with secrets held in Azure Key Vault and validation counts checked at every layer.</p>
+                                <h5>Chinook OLTP to Snowflake &mdash; Incremental ELT + dbt</h5>
+                                <p>Replicates the Chinook OLTP database into Snowflake with change data capture. Each row is hashed with SHA-256 to detect changes, and merge upserts apply them to SCD Type 1 dimensions. Extracts are staged as Parquet, then layered from staging to curated Snowflake tables, with secrets held in Azure Key Vault and validation counts checked at every layer. The transformation layer is also rebuilt in dbt on DuckDB as a star schema at invoice-line grain, with 57 tests, including one that reconciles line items to invoice totals, run in GitHub Actions on every push.</p>
                                 <ul class="modal-popup__cat">
                                     <li>Azure Data Factory</li>
                                     <li>Snowflake</li>
+                                    <li>dbt</li>
                                     <li>Parquet</li>
-                                    <li>Azure Key Vault</li>
                                     <li>CDC</li>
                                     <li>SCD</li>
                                 </ul>
                                 <ul class="stats-tabs">
                                     <li><span>SHA-256<em>row-hash change detection</em></span></li>
                                     <li><span>SCD Type 1<em>merge upserts</em></span></li>
-                                    <li><span>Per layer<em>validation counts</em></span></li>
+                                    <li><span>57 dbt tests<em>CI on every push</em></span></li>
                                 </ul>
 
                                 <p class="modal-popup__details-wrap">
