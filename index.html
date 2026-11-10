@@ -735,7 +735,7 @@
 
                             <div class="modal-popup__desc">
                                 <h5>Credit Risk Agent &mdash; Mortgage Default Model + SQL Agent</h5>
-                                <p>A mortgage default model on Freddie Mac loan-level data, plus an AI agent that answers portfolio questions about it. A 24-month default label built in DuckDB SQL across 246,040 loans, a time-based 2016 holdout, and Platt-calibrated LightGBM reach 0.8117 ROC-AUC against a 0.8008 logistic baseline. A LangGraph agent works through guarded SQL and model-scoring tools: it passed all 54 hand-verified eval cases in a live run, and a CI replay gate catches regressions that unit tests miss. A public-data portfolio project, deployed on Streamlit.</p>
+                                <p>A mortgage default model on Freddie Mac loan-level data, plus an AI agent that answers portfolio questions about it. A 24-month default label built in DuckDB SQL across 246,040 loans, a time-based 2016 holdout, and Platt-calibrated LightGBM reach 0.8117 ROC-AUC against a 0.8008 logistic baseline. A LangGraph agent works through guarded SQL and model-scoring tools: it passed all 54 hand-verified eval cases in a live run, and a CI replay gate caught a regression that unit tests missed. A public-data portfolio project, deployed on Streamlit.</p>
                                 <ul class="modal-popup__cat">
                                     <li>Python</li>
                                     <li>LightGBM</li>
@@ -871,7 +871,7 @@
 
                             <div class="modal-popup__desc">
                                 <h5>Hospital Quality Analysis &mdash; CMS Hospital Compare</h5>
-                                <p>Merged CMS Hospital Compare outcome and hospital-level datasets for 4,000+ US hospitals, reviewed outliers with boxplots, and tested whether 30-day heart attack mortality differs by hospital type. A one-way ANOVA shows that it does, and hospitals were then ranked by outcome.</p>
+                                <p>A group course project. Merged CMS Hospital Compare outcome and hospital-level datasets for 4,000+ US hospitals, reviewed outliers with boxplots, and tested whether 30-day heart attack mortality differs by hospital type. A one-way ANOVA shows that it does, and hospitals were then ranked by outcome.</p>
                                 <ul class="modal-popup__cat">
                                     <li>R</li>
                                     <li>ANOVA</li>
@@ -923,7 +923,7 @@
 
                             <div class="modal-popup__desc">
                                 <h5>Financial Summarization &mdash; T5 Fine-Tuning</h5>
-                                <p>Fine-tuned T5 to summarize financial text in PyTorch with Transformers, running a hyperparameter search on GPU with FP16 mixed precision. Every candidate model was scored with ROUGE and BLEU on a held-out test split, and the final configuration was picked on those scores rather than on a few good-looking examples.</p>
+                                <p>Fine-tuned T5 to summarize financial news-style text in PyTorch with Transformers, on a synthetic dataset generated from templates, running a hyperparameter search on GPU with FP16 mixed precision. Every candidate model was scored with ROUGE and BLEU on a held-out test split, and the final configuration was picked on those scores rather than on a few good-looking examples. Because the text is templated, the scores show the fine-tuning and selection method, not summary quality on real filings.</p>
                                 <ul class="modal-popup__cat">
                                     <li>Python</li>
                                     <li>PyTorch</li>
@@ -933,7 +933,7 @@
                                     <li>Fine-Tuning</li>
                                 </ul>
                                 <ul class="stats-tabs">
-                                    <li><span>Held-out<em>test split</em></span></li>
+                                    <li><span>Synthetic<em>template-generated data</em></span></li>
                                     <li><span>ROUGE + BLEU<em>model selection</em></span></li>
                                     <li><span>FP16<em>GPU training</em></span></li>
                                 </ul>
