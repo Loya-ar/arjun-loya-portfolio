@@ -818,7 +818,7 @@
 
                             <div class="modal-popup__desc">
                                 <h5>Business Intelligence Narrative Generator</h5>
-                                <p>Upload a CSV or Excel file and get a written executive report. The analysis happens in code before the model sees anything: pandas and SciPy compute monthly trends (linear regression, with R&sup2; grading their strength), KPIs and correlations, and detect the business domain. A prompt engine then passes those results to Google Gemini, tailored to one of 4 report styles and 4 audiences, and tells it which Plotly charts sit beside the report. Reports export to HTML, Markdown or JSON. If there&rsquo;s no API key or the call fails, the app falls back to a demo narrative, and 17 offline tests cover the pipeline.</p>
+                                <p>Upload a CSV or Excel file and get a written executive report, with every number in it checked against the data. pandas and SciPy compute the analysis first: monthly totals, trends that count only when statistically significant (p &lt; 0.05), month-over-month and year-over-year changes, which segments drove a change, and unusual months. Gemini writes the report as JSON that cites the source of each number. Code then verifies every figure, marks it green or red, and sends unsupported ones back once for correction. Across 14 test reports, the share of figures supported by the data went from 93% with a plain prompt to 100% after the check. Runs on Gemini&rsquo;s free tier, with 59 tests and CI.</p>
                                 <ul class="modal-popup__cat">
                                     <li>Python</li>
                                     <li>Streamlit</li>
@@ -826,11 +826,12 @@
                                     <li>Plotly</li>
                                     <li>Google Gemini API</li>
                                     <li>SciPy</li>
+                                    <li>GitHub Actions</li>
                                 </ul>
                                 <ul class="stats-tabs">
-                                    <li><span>Stats first<em>computed before the LLM writes</em></span></li>
-                                    <li><span>4 &times; 4<em>styles &times; audiences</em></span></li>
-                                    <li><span>17<em>offline tests</em></span></li>
+                                    <li><span>93% &rarr; 100%<em>figures supported by the data</em></span></li>
+                                    <li><span>p &lt; 0.05<em>trends must be significant</em></span></li>
+                                    <li><span>59<em>tests, CI on every push</em></span></li>
                                 </ul>
 
                                 <p class="modal-popup__details-wrap">
