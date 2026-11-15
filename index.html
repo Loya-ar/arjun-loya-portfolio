@@ -524,7 +524,7 @@
                             Featured Projects
                         </h2>
                         <p class="h1" data-animate-el>
-                            Eight builds. Each one measured, not eyeballed.
+                            Nine builds. Each one measured, not eyeballed.
                         </p>
     
                         <ul class="folio-list row block-lg-one-half block-tab-one-half block-stack-on-550">
@@ -617,29 +617,27 @@
                                 </a>
                             </li> <!--end folio-list__item -->
 
-                            <!-- Multi-Agent RL card hidden until the bandit-vs-baselines experiment is done
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-04">
                                     <div class="folio-list__item-pic">
                                         <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                                              srcset="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 1x, https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80 2x" 
-                                             alt="Multi-Agent Reinforcement Learning Analytics">
+                                             alt="Bandits vs. baselines vs. an LLM for choosing an analysis">
                                     </div>
-                                    
+
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
-                                            Machine Learning
+                                            Reinforcement Learning
                                         </div>
                                         <div class="folio-list__item-title">
-                                            Multi-Agent RL Analytics
+                                            Bandits vs. LLM: Choosing an Analysis
                                         </div>
                                     </div>
                                 </a>
                                 <a class="folio-list__proj-link" href="https://github.com/Loya-ar/intelligent-analytics-rl" title="project link" target="_blank">
                                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                                 </a>
-                            </li>
-                            end hidden Multi-Agent card -->
+                            </li> <!--end folio-list__item -->
 
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-05">
@@ -846,20 +844,20 @@
                         <div class="modal-popup">
 
                             <div class="modal-popup__desc">
-                                <h5>Intelligent Analytics Assistant &mdash; Multi-Agent RL System</h5>
-                                <p>Routes analytics tasks to specialist agents with tool calling, using contextual bandits (UCB) to choose the agent and Q-learning to coordinate them. The part I care about is the evaluation: results were validated with t-tests and confidence intervals, not judged by inspection of a few examples.</p>
+                                <h5>Intelligent Analytics &mdash; Bandits vs. Baselines vs. an LLM</h5>
+                                <p>Which of 7 analyses should an agent run on a slice of business data? I compared &epsilon;-greedy, UCB1, Thompson sampling and LinUCB with random choice, fixed rules, a zero-shot Gemini chooser and an oracle, on 4 public datasets (NYC taxi, UCI Online Retail II, Hillstrom email, IBM Telco). An analysis earns reward only for findings that replicate on held-out data. Over 400 episodes &times; 20 seeds, a fixed rule already reached 96% of the oracle&rsquo;s reward, so I report that the bandits learned to within 3&ndash;4 points of it but didn&rsquo;t beat it (paired t-tests and Wilcoxon, Holm-corrected). On the same 100 episodes, the LLM earned 45.8% of the oracle&rsquo;s reward and LinUCB, after learning, 97.2%. Built as a course project in 2025 and rebuilt on real data in 2026; 24 tests and CI reproduce every number.</p>
                                 <ul class="modal-popup__cat">
                                     <li>Python</li>
-                                    <li>Multi-Agent Systems</li>
-                                    <li>Tool Calling</li>
                                     <li>Contextual Bandits</li>
-                                    <li>Q-Learning</li>
-                                    <li>Statistical Testing</li>
+                                    <li>LinUCB</li>
+                                    <li>Thompson Sampling</li>
+                                    <li>Google Gemini API</li>
+                                    <li>SciPy</li>
                                 </ul>
                                 <ul class="stats-tabs">
-                                    <li><span>UCB<em>contextual-bandit routing</em></span></li>
-                                    <li><span>Q-learning<em>agent coordination</em></span></li>
-                                    <li><span>t-tests + CIs<em>result validation</em></span></li>
+                                    <li><span>8 methods<em>400 episodes &times; 20 seeds</em></span></li>
+                                    <li><span>45.8% vs 97.2%<em>LLM vs LinUCB, % of oracle</em></span></li>
+                                    <li><span>24 tests<em>CI reproduces results</em></span></li>
                                 </ul>
 
                                 <p class="modal-popup__details-wrap">
