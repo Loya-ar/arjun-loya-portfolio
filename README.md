@@ -12,9 +12,9 @@ MS in Information Systems, Northeastern University (expected Dec 2026). Availabl
 |---|---|---|---|
 | Credit Risk Agent | Machine Learning & AI | Python, LightGBM, DuckDB, LangGraph, Gemini, Streamlit | [Repo](https://github.com/Loya-ar/credit-risk-agent) · [Live demo](https://credit-risk-agent-loya.streamlit.app) |
 | IMDb Analytics Platform | Data Engineering | Databricks, Delta Live Tables, PySpark, Power BI | [Repo](https://github.com/Loya-ar/imdb-analytics-platform) |
-| Chinook OLTP to Snowflake ELT | Data Engineering | Azure Data Factory, Snowflake, Parquet, Azure Key Vault | [Repo](https://github.com/Loya-ar/chinook-snowflake-elt) |
+| Chinook OLTP to Snowflake ELT | Data Engineering | Azure Data Factory, Snowflake, dbt, DuckDB, Airflow, Azure Key Vault | [Repo](https://github.com/Loya-ar/chinook-snowflake-elt) |
 | BI Narrative Generator | Business Intelligence | Python, Streamlit, Plotly, Gemini API | [Repo](https://github.com/Loya-ar/bi-narrative-generator) |
-| Multi-Agent Analytics System | Machine Learning | Python, contextual bandits (UCB), Q-learning | [Repo](https://github.com/Loya-ar/intelligent-analytics-rl) |
+| Intelligent Analytics: Bandits vs. an LLM | Machine Learning | Python, contextual bandits (LinUCB, Thompson sampling), Gemini API | [Repo](https://github.com/Loya-ar/intelligent-analytics-rl) |
 | Hospital Quality Analysis | Statistics | R, ANOVA, CMS Hospital Compare | [Video](https://youtu.be/oHZWyJ4h-6k) |
 | NYC Taxi Demand Forecasting | Forecasting | R, ARIMA, tidyverse, ggplot2 | [Repo](https://github.com/Loya-ar/nyc-taxi-demand-forecasting) |
 | Financial Summarization: T5 | NLP & LLMs | PyTorch, Transformers | [Colab](https://colab.research.google.com/drive/1Pk2HBWM4OboriOW4B1mSOJ_kmu7FmFU_) |
