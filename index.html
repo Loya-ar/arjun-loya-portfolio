@@ -524,7 +524,7 @@
                             Featured Projects
                         </h2>
                         <p class="h1" data-animate-el>
-                            Nine builds. Each one measured, not eyeballed.
+                            Ten builds. Each one measured, not eyeballed.
                         </p>
     
                         <ul class="folio-list row block-lg-one-half block-tab-one-half block-stack-on-550">
@@ -547,6 +547,28 @@
                                     </div>
                                 </a>
                                 <a class="folio-list__proj-link" href="https://github.com/Loya-ar/credit-risk-agent" title="project link" target="_blank">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li> <!--end folio-list__item -->
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="#modal-10">
+                                    <div class="folio-list__item-pic">
+                                        <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                             srcset="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 1x, https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80 2x"
+                                             alt="Campaign A/B test analysis of a randomised email experiment">
+                                    </div>
+
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Experimentation
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            Campaign A/B Test Analysis
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://github.com/Loya-ar/campaign-ab-test-analysis" title="project link" target="_blank">
                                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                                 </a>
                             </li> <!--end folio-list__item -->
@@ -753,6 +775,34 @@
                                 <p class="modal-popup__details-wrap">
                                     <a href="https://credit-risk-agent-loya.streamlit.app" class="modal-popup__details" target="_blank">Live Demo</a>
                                     <a href="https://github.com/Loya-ar/credit-risk-agent" class="modal-popup__details" target="_blank">Project Details</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div> <!-- end modal -->
+
+                    <div id="modal-10" hidden>
+                        <div class="modal-popup">
+
+                            <div class="modal-popup__desc">
+                                <h5>Campaign A/B Test Analysis &mdash; From Power Analysis to Ship Decision</h5>
+                                <p>A full analysis of a real randomised experiment: 64,000 retail customers split into a men's email, a women's email or no email (Kevin Hillstrom's public dataset). It starts with design and power (the smallest detectable conversion lift is 43% at ~21,300 per group), then checks the randomisation (sample-ratio p = 0.90, largest SMD 0.014). Two-proportion tests with Holm correction show the men's email lifts conversion by +0.68 pp (+119%) and the women's by +0.31 pp (+54%), while spend per buyer holds steady. Welch tests and a bootstrap handle skewed spend, CUPED is tried and honestly reported as giving under 0.5% here, and an A/A simulation shows peeking pushes false positives from 5% to 34%. It ends in a one-page memo: ship the men's email, retest the women's. 28 tests, and CI reruns every report on the real data.</p>
+                                <ul class="modal-popup__cat">
+                                    <li>Python</li>
+                                    <li>SciPy</li>
+                                    <li>statsmodels</li>
+                                    <li>A/B Testing</li>
+                                    <li>CUPED</li>
+                                    <li>pytest</li>
+                                </ul>
+                                <ul class="stats-tabs">
+                                    <li><span>+119%<em>men's email conversion lift</em></span></li>
+                                    <li><span>5% &rarr; 34%<em>false positives from peeking</em></span></li>
+                                    <li><span>64,000<em>randomised customers</em></span></li>
+                                </ul>
+
+                                <p class="modal-popup__details-wrap">
+                                    <a href="https://github.com/Loya-ar/campaign-ab-test-analysis/blob/main/docs/decision_memo.md" class="modal-popup__details" target="_blank">Decision Memo</a>
+                                    <a href="https://github.com/Loya-ar/campaign-ab-test-analysis" class="modal-popup__details" target="_blank">Project Details</a>
                                 </p>
                             </div>
                         </div>

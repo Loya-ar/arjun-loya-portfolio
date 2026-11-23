@@ -2,7 +2,7 @@
 
 **Live site:** [arjunloya.com](https://arjunloya.com/?utm_source=github)
 
-I build data warehouses and the AI systems that read from them. This repo is the source for my personal site: experience, education, and nine featured projects across data engineering, analytics, statistics, and applied AI.
+I build data warehouses and the AI systems that read from them. This repo is the source for my personal site: experience, education, and ten featured projects across data engineering, analytics, statistics, and applied AI.
 
 MS in Information Systems, Northeastern University (expected Dec 2026). Available full-time from January 2027.
 
@@ -11,6 +11,7 @@ MS in Information Systems, Northeastern University (expected Dec 2026). Availabl
 | Project | Area | Stack | Link |
 |---|---|---|---|
 | Credit Risk Agent | Machine Learning & AI | Python, LightGBM, DuckDB, LangGraph, Gemini, Streamlit | [Repo](https://github.com/Loya-ar/credit-risk-agent) · [Live demo](https://credit-risk-agent-loya.streamlit.app) |
+| Campaign A/B Test Analysis | Experimentation | Python, SciPy, statsmodels, pytest | [Repo](https://github.com/Loya-ar/campaign-ab-test-analysis) |
 | IMDb Analytics Platform | Data Engineering | Databricks, Delta Live Tables, PySpark, Power BI | [Repo](https://github.com/Loya-ar/imdb-analytics-platform) |
 | Chinook OLTP to Snowflake ELT | Data Engineering | Azure Data Factory, Snowflake, dbt, DuckDB, Airflow, Azure Key Vault | [Repo](https://github.com/Loya-ar/chinook-snowflake-elt) |
 | BI Narrative Generator | Business Intelligence | Python, Streamlit, Plotly, Gemini API | [Repo](https://github.com/Loya-ar/bi-narrative-generator) |
