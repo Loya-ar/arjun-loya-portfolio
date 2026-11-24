@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/li", "destination": "/index.html" },
+    { "source": "/cv", "destination": "/index.html" },
+    { "source": "/gh", "destination": "/index.html" },
+    { "source": "/apply", "destination": "/index.html" },
+    { "source": "/go/:slug", "destination": "/go.html" }
+  ]
+}

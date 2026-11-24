@@ -1,6 +1,6 @@
 # Arjun Loya — Portfolio
 
-**Live site:** [arjunloya.com](https://arjunloya.com/?utm_source=github)
+**Live site:** [arjunloya.com](https://arjunloya.com/gh)
 
 I build data warehouses and the AI systems that read from them. This repo is the source for my personal site: experience, education, and ten featured projects across data engineering, analytics, statistics, and applied AI.
 
@@ -31,6 +31,8 @@ A static site with no build step: plain HTML, CSS, and JavaScript, deployed on V
 ├── index.html        # the whole site: intro, about, experience, projects, contact
 ├── resume.html       # records a page view, then opens resume.pdf
 ├── resume.pdf        # current resume
+├── go.html           # /go/<name>: records a page view, then opens a project link
+├── vercel.json       # short links (/li, /cv, /gh, /apply, /go/<name>)
 ├── css/              # template styles
 ├── js/               # template scripts (navigation, animations, project popups)
 ├── images/           # profile photo and Open Graph preview image
@@ -39,10 +41,20 @@ A static site with no build step: plain HTML, CSS, and JavaScript, deployed on V
 
 ## Analytics
 
-The site uses Vercel Web Analytics (cookie-free, no personal data collected). Two small additions make it more useful for a job search:
+The site uses Vercel Web Analytics (cookie-free, no personal data collected) on the free Hobby plan. Hobby reports page views, referrers, countries and devices, but not UTM tags or custom events, so everything below is done with page paths, which it does report:
 
-- **Resume opens.** Every resume button points to `resume.html`, which counts as a page view before redirecting to the PDF. Views of `/resume.html` show how often the resume is opened from the site.
-- **Traffic sources.** Links to the site carry a `utm_source` tag (`resume`, `linkedin`, `github`), and resume links also carry `utm_campaign` for the resume version. This separates visits that would otherwise all appear as "direct."
+- **Traffic sources.** Each place that links to the site uses its own short path, set up as rewrites in `vercel.json` that serve the normal home page. The Pages tab then shows where visitors came from:
+
+  | Link | Used on |
+  |---|---|
+  | `arjunloya.com/li` | LinkedIn profile and posts |
+  | `arjunloya.com/cv` | resume PDF |
+  | `arjunloya.com/gh` | GitHub profile and READMEs |
+  | `arjunloya.com/apply` | job applications and emails |
+
+- **Project clicks.** Project and profile links go through `/go/<name>` (served by `go.html`), which records a page view and then redirects to a fixed list of destinations. Views of `/go/credit-risk`, `/go/ab-test` and so on show which projects visitors open.
+- **Resume opens.** Every resume button points to `resume.html`, which counts as a page view before opening the PDF.
+- **Own visits.** Opening any page with `?me` (for example `arjunloya.com/?me`) stops counting visits from that browser; `?me=off` turns it back on. See `js/analytics-optout.js`.
 
 ## Updating the site
 

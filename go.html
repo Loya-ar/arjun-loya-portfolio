@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arjun Loya | Opening project</title>
+    <meta name="robots" content="noindex">
+    <style>
+        body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+               background: #151617; color: #fff; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+        a { color: #fff; }
+    </style>
+    <script src="/js/analytics-optout.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+    <p id="msg">Opening&hellip;</p>
+    <script>
+        // /go/<slug> is served by this page (see vercel.json). The page view is recorded
+        // under /go/<slug>, which shows which project links visitors open, then we redirect.
+        // Only these destinations are allowed, so the page can't be used as an open redirect.
+        var LINKS = {
+            "credit-risk":      "https://github.com/Loya-ar/credit-risk-agent",
+            "credit-risk-demo": "https://credit-risk-agent-loya.streamlit.app",
+            "ab-test":          "https://github.com/Loya-ar/campaign-ab-test-analysis",
+            "ab-test-memo":     "https://github.com/Loya-ar/campaign-ab-test-analysis/blob/main/docs/decision_memo.md",
+            "imdb":             "https://github.com/Loya-ar/imdb-analytics-platform",
+            "chinook":          "https://github.com/Loya-ar/chinook-snowflake-elt",
+            "bi-narrative":     "https://github.com/Loya-ar/bi-narrative-generator",
+            "bandits":          "https://github.com/Loya-ar/intelligent-analytics-rl",
+            "hospital":         "https://youtu.be/oHZWyJ4h-6k",
+            "nyc-taxi":         "https://github.com/Loya-ar/nyc-taxi-demand-forecasting",
+            "t5":               "https://colab.research.google.com/drive/1Pk2HBWM4OboriOW4B1mSOJ_kmu7FmFU_",
+            "github":           "https://github.com/Loya-ar",
+            "linkedin":         "https://linkedin.com/in/arjun-loya"
+        };
+        var slug = location.pathname.replace(/\/+$/, "").split("/").pop();
+        var target = Object.prototype.hasOwnProperty.call(LINKS, slug) ? LINKS[slug] : "/";
+        var link = document.createElement("a");
+        link.href = target;
+        link.textContent = "click here if it doesn't open";
+        var msg = document.getElementById("msg");
+        msg.appendChild(document.createTextNode(" "));
+        msg.appendChild(link);
+        setTimeout(function () { window.location.replace(target); }, 700);
+    </script>
+</body>
+</html>
