@@ -31,7 +31,7 @@ A static site with no build step: plain HTML, CSS, and JavaScript, deployed on V
 ├── index.html        # the whole site: intro, about, experience, projects, contact
 ├── resume.html       # records a page view, then opens resume.pdf
 ├── resume.pdf        # current resume
-├── go.html           # /go/<name>: records a page view, then opens a project link
+├── go.html           # /go/<name>: records a page view (silently, or as a redirect)
 ├── vercel.json       # short links (/li, /cv, /gh, /apply, /go/<name>)
 ├── css/              # template styles
 ├── js/               # template scripts (navigation, animations, project popups)
@@ -52,7 +52,7 @@ The site uses Vercel Web Analytics (cookie-free, no personal data collected) on 
   | `arjunloya.com/gh` | GitHub profile and READMEs |
   | `arjunloya.com/apply` | job applications and emails |
 
-- **Project clicks.** Project and profile links go through `/go/<name>` (served by `go.html`), which records a page view and then redirects to a fixed list of destinations. Views of `/go/credit-risk`, `/go/ab-test` and so on show which projects visitors open.
+- **Project clicks.** Project and profile links open their real URL directly. Each is tagged `data-go="<name>"`, and on click `js/track-clicks.js` loads `/go/<name>` in a hidden frame, so Vercel records a view of `/go/credit-risk`, `/go/ab-test` and so on without slowing the link down. Opened directly, `/go/<name>` (served by `go.html`) redirects to a fixed list of destinations.
 - **Resume opens.** Every resume button points to `resume.html`, which counts as a page view before opening the PDF.
 - **Own visits.** Opening any page with `?me` (for example `arjunloya.com/?me`) stops counting visits from that browser; `?me=off` turns it back on. See `js/analytics-optout.js`.
 

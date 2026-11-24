@@ -17,7 +17,8 @@
     <p id="msg">Opening&hellip;</p>
     <script>
         // /go/<slug> is served by this page (see vercel.json). The page view is recorded
-        // under /go/<slug>, which shows which project links visitors open, then we redirect.
+        // under /go/<slug>. Site links load it silently in a hidden frame (js/track-clicks.js);
+        // opened directly, it redirects to the project.
         // Only these destinations are allowed, so the page can't be used as an open redirect.
         var LINKS = {
             "credit-risk":      "https://github.com/Loya-ar/credit-risk-agent",
@@ -34,15 +35,20 @@
             "github":           "https://github.com/Loya-ar",
             "linkedin":         "https://linkedin.com/in/arjun-loya"
         };
-        var slug = location.pathname.replace(/\/+$/, "").split("/").pop();
-        var target = Object.prototype.hasOwnProperty.call(LINKS, slug) ? LINKS[slug] : "/";
-        var link = document.createElement("a");
-        link.href = target;
-        link.textContent = "click here if it doesn't open";
+        // ?silent: loaded in a hidden frame by js/track-clicks.js just to record the view.
         var msg = document.getElementById("msg");
-        msg.appendChild(document.createTextNode(" "));
-        msg.appendChild(link);
-        setTimeout(function () { window.location.replace(target); }, 700);
+        if (new URLSearchParams(location.search).has("silent")) {
+            msg.textContent = "";
+        } else {
+            var slug = location.pathname.replace(/\/+$/, "").split("/").pop();
+            var target = Object.prototype.hasOwnProperty.call(LINKS, slug) ? LINKS[slug] : "/";
+            var link = document.createElement("a");
+            link.href = target;
+            link.textContent = "click here if it doesn't open";
+            msg.appendChild(document.createTextNode(" "));
+            msg.appendChild(link);
+            setTimeout(function () { window.location.replace(target); }, 700);
+        }
     </script>
 </body>
 </html>
